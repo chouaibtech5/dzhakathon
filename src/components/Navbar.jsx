@@ -1,5 +1,5 @@
+import { NavLink } from "react-router-dom";
 import LogoDzDelice from "../icons/LogoDzDelice.jsx";
-import SearchIcon from "../icons/SearchIcon.jsx";
 import WebIcon from "../icons/WebIcon.jsx";
 import ShopBagIcon from "../icons/ShopBagIcon.jsx";
 import FacebookIcon from "../icons/FacebookIcon.jsx";
@@ -7,6 +7,7 @@ import InstagramIcon from "../icons/InstagramIcon.jsx";
 import ArrowIcon from "../icons/ArrowIcon.jsx";
 import { useCart } from "../context/CartContext.jsx";
 import OrderModal from "./OrderModal.jsx";
+import { useState } from "react";
 
 export default function Navbar() {
   const { getCartCount } = useCart();
