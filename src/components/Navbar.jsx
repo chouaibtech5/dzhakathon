@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
 import LogoDzDelice from "../icons/LogoDzDelice.jsx";
 import SearchIcon from "../icons/SearchIcon.jsx";
 import WebIcon from "../icons/WebIcon.jsx";
@@ -28,20 +29,60 @@ export default function Navbar() {
             </span>
           </div>
 
-          {/* Search */}
-          <div className="hidden flex-1 items-center justify-center md:flex">
-            <div
-              className="flex w-[400px] items-center gap-3 rounded-[8px] bg-[#EAEAEA] px-4 py-2"
-              style={{ height: "36px" }}
-            >
-              <SearchIcon size={18} />
-              <input
-                className="w-full bg-transparent text-sm outline-none placeholder:text-[#94A0BB]"
-                placeholder="Search"
-                style={{ fontSize: "14px" }}
-              />
-            </div>
-          </div>
+          {/* Tabs */}
+          <nav className="hidden flex-1 items-center justify-center md:flex">
+            <ul className="flex items-center gap-10">
+              <li>
+                <NavLink
+                  to="/"
+                  end
+                  style={({ isActive }) => ({
+                    fontFamily: "Poppins",
+                    fontWeight: isActive ? 800 : 400,
+                    fontSize: "20px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    color: isActive ? "#F67F20" : "#00000096",
+                  })}
+                >
+                  Home
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/dishes"
+                  style={({ isActive }) => ({
+                    fontFamily: "Poppins",
+                    fontWeight: isActive ? 800 : 400,
+                    fontSize: "20px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    color: isActive ? "#F67F20" : "#00000096",
+                  })}
+                >
+                  Menu
+                </NavLink>
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  style={{
+                    fontFamily: "Poppins",
+                    fontWeight: 400,
+                    fontSize: "20px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    color: "#00000096",
+                  }}
+                >
+                  About us
+                </a>
+              </li>
+            </ul>
+          </nav>
 
           {/* Icons */}
           <div className="ml-auto hidden items-center gap-4 text-[#F67F20] md:flex">
@@ -69,6 +110,7 @@ export default function Navbar() {
 
           {/* CTA */}
           <button
+            onClick={() => (window.location.href = "/login")}
             className="ml-2 flex items-center gap-[10px] whitespace-nowrap bg-[#F67F20] text-white shadow"
             style={{
               borderRadius: "39px",

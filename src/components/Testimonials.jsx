@@ -53,6 +53,8 @@ const reviews = [
 ];
 
 export default function Testimonials() {
+  const duplicated = [...reviews, ...reviews];
+
   return (
     <section className="container mx-auto px-4 py-8">
       <div className="mb-4 flex items-center justify-between">
@@ -64,100 +66,197 @@ export default function Testimonials() {
             fontSize: "30px",
             lineHeight: "130%",
             letterSpacing: "2%",
-            
           }}
         >
           Reviews - Users Testimonials
         </h2>
       </div>
-      <div className="flex flex-wrap justify-center gap-16">
-        {reviews.map((r) => (
-          <div
-            key={r.id}
-            className="group relative overflow-hidden bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-            style={{
-              width: "300px",
-              minHeight: "163px",
-              borderRadius: "11px",
-              padding: "10px",
-            }}
-          >
-            <div className="flex flex-col gap-3">
-              {/* Avatar and Rating */}
-              <div className="flex items-start justify-between">
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 overflow-hidden rounded-full bg-[#FFC700] p-0.5">
-                    <img
-                      src={r.avatar}
-                      alt={r.name}
-                      className="h-full w-full rounded-full object-cover"
-                    />
+      <div className="space-y-6">
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {duplicated.map((r, idx) => (
+              <div
+                key={`row1-${r.id}-${idx}`}
+                className="group relative overflow-hidden bg-white transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  width: "300px",
+                  minHeight: "163px",
+                  borderRadius: "11px",
+                  padding: "10px",
+                  marginRight: "24px",
+                }}
+              >
+                <div className="flex flex-col gap-3">
+                  {/* Avatar and Rating */}
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="h-12 w-12 overflow-hidden rounded-full bg-[#FFC700] p-0.5">
+                        <img
+                          src={r.avatar}
+                          alt={r.name}
+                          className="h-full w-full rounded-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className={`h-5 w-5 ${
+                            i < r.rating ? "text-[#F67F20]" : "text-gray-300"
+                          }`}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* User Name */}
+                  <h3
+                    className="text-left font-semibold text-black"
+                    style={{
+                      fontFamily: "Poppins",
+                      fontWeight: 600,
+                      fontSize: "14px",
+                      lineHeight: "100%",
+                      letterSpacing: "2%",
+                    }}
+                  >
+                    {r.name}
+                  </h3>
+
+                  {/* Testimonial Text */}
+                  <p
+                    className="text-left"
+                    style={{
+                      fontFamily: "Poppins",
+                      fontWeight: 400,
+                      fontSize: "12px",
+                      lineHeight: "100%",
+                      letterSpacing: "2%",
+                      color: "#00000080",
+                    }}
+                  >
+                    {r.text}
+                  </p>
+
+                  {/* See More Button */}
+                  <div
+                    className="flex items-center justify-start gap-1 text-black"
+                    style={{
+                      height: "18px",
+                      fontFamily: "Poppins",
+                      fontWeight: 400,
+                      fontSize: "12px",
+                      lineHeight: "100%",
+                      letterSpacing: "2%",
+                    }}
+                  >
+                    <GalleryIcon size={14} className="text-black" />
+                    <span className="whitespace-nowrap">See more</span>
+                    <ArrowRightIcon size={8} className="text-black" />
                   </div>
                 </div>
-                <div className="flex items-center gap-1">
-                  {[...Array(5)].map((_, i) => (
-                    <svg
-                      key={i}
-                      className={`h-5 w-5 ${
-                        i < r.rating ? "text-[#F67F20]" : "text-gray-300"
-                      }`}
-                      fill="currentColor"
-                      viewBox="0 0 20 20"
-                    >
-                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                    </svg>
-                  ))}
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="marquee-container">
+          <div className="marquee-track reverse">
+            {duplicated.map((r, idx) => (
+              <div
+                key={`row2-${r.id}-${idx}`}
+                className="group relative overflow-hidden bg-white transition-all duration-300 hover:-translate-y-1"
+                style={{
+                  width: "300px",
+                  minHeight: "163px",
+                  borderRadius: "11px",
+                  padding: "10px",
+                  marginRight: "24px",
+                }}
+              >
+                <div className="flex flex-col gap-3">
+                  {/* Avatar and Rating */}
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center gap-3">
+                      <div className="h-12 w-12 overflow-hidden rounded-full bg-[#FFC700] p-0.5">
+                        <img
+                          src={r.avatar}
+                          alt={r.name}
+                          className="h-full w-full rounded-full object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className={`h-5 w-5 ${
+                            i < r.rating ? "text-[#F67F20]" : "text-gray-300"
+                          }`}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* User Name */}
+                  <h3
+                    className="text-left font-semibold text-black"
+                    style={{
+                      fontFamily: "Poppins",
+                      fontWeight: 600,
+                      fontSize: "14px",
+                      lineHeight: "100%",
+                      letterSpacing: "2%",
+                    }}
+                  >
+                    {r.name}
+                  </h3>
+
+                  {/* Testimonial Text */}
+                  <p
+                    className="text-left"
+                    style={{
+                      fontFamily: "Poppins",
+                      fontWeight: 400,
+                      fontSize: "12px",
+                      lineHeight: "100%",
+                      letterSpacing: "2%",
+                      color: "#00000080",
+                    }}
+                  >
+                    {r.text}
+                  </p>
+
+                  {/* See More Button */}
+                  <div
+                    className="flex items-center justify-start gap-1 text-black"
+                    style={{
+                      height: "18px",
+                      fontFamily: "Poppins",
+                      fontWeight: 400,
+                      fontSize: "12px",
+                      lineHeight: "100%",
+                      letterSpacing: "2%",
+                    }}
+                  >
+                    <GalleryIcon size={14} className="text-black" />
+                    <span className="whitespace-nowrap">See more</span>
+                    <ArrowRightIcon size={8} className="text-black" />
+                  </div>
                 </div>
               </div>
-
-              {/* User Name */}
-              <h3
-                className="text-left font-semibold text-black"
-                style={{
-                  fontFamily: "Poppins",
-                  fontWeight: 600,
-                  fontSize: "14px",
-                  lineHeight: "100%",
-                  letterSpacing: "2%",
-                }}
-              >
-                {r.name}
-              </h3>
-
-              {/* Testimonial Text */}
-              <p
-                className="text-left"
-                style={{
-                  fontFamily: "Poppins",
-                  fontWeight: 400,
-                  fontSize: "12px",
-                  lineHeight: "100%",
-                  letterSpacing: "2%",
-                  color: "#00000080",
-                }}
-              >
-                {r.text}
-              </p>
-
-              {/* See More Button */}
-              <div
-                className="flex items-center justify-start gap-1 text-black"
-                style={{
-                  height: "18px",
-                  fontFamily: "Poppins",
-                  fontWeight: 400,
-                  fontSize: "12px",
-                  lineHeight: "100%",
-                  letterSpacing: "2%",
-                }}
-              >
-                <GalleryIcon size={14} className="text-black" />
-                <span className="whitespace-nowrap">See more</span>
-                <ArrowRightIcon size={8} className="text-black" />
-              </div>
-            </div>
+            ))}
           </div>
-        ))}
+        </div>
       </div>
     </section>
   );

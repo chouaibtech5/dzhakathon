@@ -1,22 +1,20 @@
-export default function SearchIcon({ size = 18, className = "" }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 18 18"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      className={className}
-      aria-hidden="true"
-      focusable="false"
-    >
-      <path
-        d="M16.6667 16.5L13.0417 12.875M15.0001 8.16667C15.0001 11.8486 12.0153 14.8333 8.33341 14.8333C4.65152 14.8333 1.66675 11.8486 1.66675 8.16667C1.66675 4.48477 4.65152 1.5 8.33341 1.5C12.0153 1.5 15.0001 4.48477 15.0001 8.16667Z"
-        stroke="#F67F20"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+const SearchIcon = ({ size = 17, className = "" }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 17 18"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    className={className}
+  >
+    <path
+      d="M16.1653 16.5L12.5403 12.875M14.4986 8.16667C14.4986 11.8486 11.5138 14.8333 7.83195 14.8333C4.15005 14.8333 1.16528 11.8486 1.16528 8.16667C1.16528 4.48477 4.15005 1.5 7.83195 1.5C11.5138 1.5 14.4986 4.48477 14.4986 8.16667Z"
+      stroke="black"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);
+
+export default SearchIcon;

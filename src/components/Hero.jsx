@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ReservationModal from "./ReservationModal.jsx";
+import SearchIcon from "../icons/SearchIcon.jsx";
 
 export default function Hero() {
   const [isReservationOpen, setIsReservationOpen] = useState(false);
@@ -47,6 +48,20 @@ export default function Hero() {
           >
             Fresh, Fast & Hassle-Free Ordering
           </p>
+          {/* Moved Search Bar (same design as navbar search) */}
+          <div className="mt-6 ml-[50px] hidden md:block">
+            <div
+              className="flex w-[400px] items-center gap-3 rounded-[8px] bg-white border border-[#EAEAEA] px-4 py-2"
+              style={{ height: "36px" }}
+            >
+              <SearchIcon size={18} />
+              <input
+                className="w-full bg-transparent text-sm outline-none placeholder:text-[#94A0BB]"
+                placeholder="Search"
+                style={{ fontSize: "14px" }}
+              />
+            </div>
+          </div>
           <div
             className="mt-12 flex items-center gap-3 ml-[50px] "
             style={{ width: "500px" }}
