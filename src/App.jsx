@@ -19,6 +19,7 @@ import AddStatisticForMeal from "./admin/pages/AddStatisticForMeal.jsx";
 import MealStatisticDetails from "./admin/pages/MealStatisticDetails.jsx";
 import Notifications from "./admin/pages/Notifications.jsx";
 import Dishes from "./pages/dishes.jsx";
+import DashboardClient from "./pages/dashboardClient.jsx";
 // import DishDetails from "./pages/DishDetails.jsx";
 import Login from "./pages/login.jsx";
 
@@ -38,7 +39,7 @@ export default function App() {
              <Route path="/dishes" element={<Dishes />} />
             {/* <Route path="/dish/:id" element={<DishDetails />} /> */}
             <Route path="/login" element={<Login />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/dashboard" element={<DashboardClient />} />
 
             
             {/* Admin Routes */}
