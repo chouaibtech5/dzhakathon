@@ -1,5 +1,3 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
 import LogoDzDelice from "../icons/LogoDzDelice.jsx";
 import SearchIcon from "../icons/SearchIcon.jsx";
 import WebIcon from "../icons/WebIcon.jsx";
@@ -110,7 +108,6 @@ export default function Navbar() {
 
           {/* CTA */}
           <button
-            onClick={() => (window.location.href = "/login")}
             className="ml-2 flex items-center gap-[10px] whitespace-nowrap bg-[#F67F20] text-white shadow"
             style={{
               borderRadius: "39px",
