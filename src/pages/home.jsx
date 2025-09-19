@@ -3,7 +3,7 @@ import Hero from "../components/Hero.jsx";
 import Categories from "../components/Categories.jsx";
 import Trending from "../components/Trending.jsx";
 import Testimonials from "../components/Testimonials.jsx";
-import CTA from "../components/CTA.jsx";
+import Footer from "../components/Footer.jsx";
 
 export default function Home() {
   return (
@@ -12,10 +12,11 @@ export default function Home() {
       <div
         className="absolute"
         style={{
-          width: "868px",
-          height: "716.72px",
-          top: "-113px",
-          left: "412px",
+          width: "600x",
+          height: "650px",
+          top: "-50px",
+
+          right: "-50px",
           zIndex: 1,
         }}
       >
@@ -31,19 +32,8 @@ export default function Home() {
       <Categories />
       <Trending />
       <Testimonials />
-      <CTA />
-      <footer className="container mx-auto px-4 py-10 text-sm text-gray-500">
-        <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
-          <div>
-            © {new Date().getFullYear()} DZ Délice. All rights reserved.
-          </div>
-          <div className="flex items-center gap-4">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Support</a>
-          </div>
-        </div>
-      </footer>
+     
+      <Footer />
     </main>
   );
 }

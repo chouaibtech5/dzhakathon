@@ -1,3 +1,4 @@
+import { useState } from "react";
 import LogoDzDelice from "../icons/LogoDzDelice.jsx";
 import SearchIcon from "../icons/SearchIcon.jsx";
 import WebIcon from "../icons/WebIcon.jsx";
@@ -5,8 +6,14 @@ import ShopBagIcon from "../icons/ShopBagIcon.jsx";
 import FacebookIcon from "../icons/FacebookIcon.jsx";
 import InstagramIcon from "../icons/InstagramIcon.jsx";
 import ArrowIcon from "../icons/ArrowIcon.jsx";
+import { useCart } from "../context/CartContext.jsx";
+import OrderModal from "./OrderModal.jsx";
 
 export default function Navbar() {
+  const { getCartCount } = useCart();
+  const cartCount = getCartCount();
+  const [isOrderOpen, setIsOrderOpen] = useState(false);
+
   return (
     <header className="relative w-full">
       <div className="container relative mx-auto px-4 pt-3">
@@ -41,9 +48,17 @@ export default function Navbar() {
             <span className="grid h-8 w-8 place-items-center rounded-full bg-[#FFF1E6]">
               <WebIcon size={20} />
             </span>
-            <span className="grid h-8 w-8 place-items-center rounded-full bg-[#FFF1E6]">
+            <button
+              onClick={() => setIsOrderOpen(true)}
+              className="relative grid h-8 w-8 place-items-center rounded-full bg-[#FFF1E6] hover:bg-[#F67F20]/10 transition-colors"
+            >
               <ShopBagIcon size={19} />
-            </span>
+              {cartCount > 0 && (
+                <span className="absolute -top-1 -right-1 bg-[#F67F20] text-white text-xs rounded-full h-5 w-5 flex items-center justify-center font-bold">
+                  {cartCount > 99 ? "99+" : cartCount}
+                </span>
+              )}
+            </button>
             <span className="grid h-8 w-8 place-items-center rounded-full bg-[#FFF1E6]">
               <FacebookIcon size={20} />
             </span>
@@ -84,6 +99,9 @@ export default function Navbar() {
           </button>
         </div>
       </div>
+
+      {/* Order Modal */}
+      <OrderModal isOpen={isOrderOpen} onClose={() => setIsOrderOpen(false)} />
     </header>
   );
 }

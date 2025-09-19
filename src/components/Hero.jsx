@@ -1,25 +1,106 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import ReservationModal from "./ReservationModal.jsx";
+
 export default function Hero() {
+  const [isReservationOpen, setIsReservationOpen] = useState(false);
+
   return (
     <section className="relative min-h-[600px] ">
-      <div className="container relative mx-auto grid items-center gap-8 px-4 py-10 md:grid-cols-2 md:py-14">
-        <div className="z-10">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/80 px-3 py-1 text-xs text-gray-700 shadow">
-            <span className="inline-block h-2 w-2 rounded-full bg-[#F67F20]"></span>
-            Fresh & Fast Delivery
-          </div>
-          <h1 className="mt-4 text-4xl font-extrabold leading-tight md:text-5xl">
-            Welcome to <span className="text-black">DzDélice</span> – Your
-            Gateway to Delicious Moments
+      <div
+        className="container relative mx-auto grid items-center gap-8 px-4 py-10 md:grid-cols-2 md:py-14"
+        style={{ minWidth: "800px" }}
+      >
+        <div
+          className="z-10"
+          style={{ paddingTop: "20px", paddingRight: "20px" }}
+        >
+          <h1
+            className="text-[#F67F20]"
+            style={{
+              width: "503px",
+              height: "153px",
+              fontFamily: "Poppins",
+              fontWeight: 700,
+              fontSize: "44px",
+              lineHeight: "51px",
+              letterSpacing: "0%",
+              marginLeft: "50px",
+              paddingTop: "40px",
+            }}
+          >
+            Welcome to <span className="text-black">Dz</span>
+            <span className="text-[#F67F20]">Délice</span> – Your Gateway to
+            Delicious Moments
           </h1>
-          <p className="mt-4 max-w-prose text-black">
+          <p
+            className="mt-16 text-black ml-[50px]"
+            style={{
+              width: "435px",
+              height: "52px",
+              fontFamily: "Poppins",
+              fontWeight: 500,
+              fontSize: "26px",
+              lineHeight: "100%",
+              letterSpacing: "0%",
+            }}
+          >
             Fresh, Fast & Hassle-Free Ordering
           </p>
-          <div className="mt-6 flex flex-wrap items-center gap-3">
-            <button className="rounded-full bg-[#F67F20] px-6 py-3 text-white">
-              Order Now
-            </button>
-            <button className="rounded-full border border-[#F67F20] bg-white px-6 py-3 text-[#F67F20]">
-              Reserve a table
+          <div
+            className="mt-12 flex items-center gap-3 ml-[50px] "
+            style={{ width: "500px" }}
+          >
+            <Link
+              to="/dishes"
+              className="bg-[#F67F20] text-white flex-shrink-0 hover:bg-[#E55A2B] transition-colors"
+              style={{
+                width: "183px",
+                height: "52px",
+                borderRadius: "1000px",
+                paddingTop: "16px",
+                paddingRight: "37px",
+                paddingBottom: "16px",
+                paddingLeft: "37px",
+                gap: "10px",
+                fontFamily: "Poppins",
+                fontWeight: 700,
+                fontSize: "20px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                textDecoration: "none",
+              }}
+            >
+              <span style={{ width: "109px", height: "20px" }}>Order Now</span>
+            </Link>
+            <button
+              onClick={() => setIsReservationOpen(true)}
+              className="border-2 border-[#F67F20] bg-white text-[#F67F20] flex-shrink-0 cursor-pointer hover:bg-[#F67F20] hover:text-white transition-colors"
+              style={{
+                width: "auto",
+                height: "52px",
+                borderRadius: "1000px",
+                paddingTop: "16px",
+                paddingRight: "37px",
+                paddingBottom: "16px",
+                paddingLeft: "37px",
+                gap: "10px",
+                fontFamily: "Poppins",
+                fontWeight: 700,
+                fontSize: "20px",
+                lineHeight: "100%",
+                letterSpacing: "0%",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+              }}
+            >
+              <span style={{ width: "158px", height: "20px" }}>
+                Reserve a table
+              </span>
             </button>
           </div>
         </div>
@@ -30,8 +111,8 @@ export default function Hero() {
           style={{
             width: "436px",
             height: "473px",
-            top: "187px",
-            right: "0px",
+            bottom: "-90px",
+            right: "100px",
           }}
         >
           <img
@@ -41,6 +122,12 @@ export default function Hero() {
           />
         </div>
       </div>
+
+      {/* Reservation Modal */}
+      <ReservationModal
+        isOpen={isReservationOpen}
+        onClose={() => setIsReservationOpen(false)}
+      />
     </section>
   );
 }
