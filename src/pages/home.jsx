@@ -32,7 +32,7 @@ export default function Home() {
       <Categories />
       <Trending />
       <Testimonials />
-     
+
       <Footer />
     </main>
   );

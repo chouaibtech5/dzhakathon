@@ -281,7 +281,8 @@ export default function Dishes() {
           {filteredDishes.map((dish) => (
             <article
               key={dish.id}
-              className="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105"
+              className="group relative overflow-hidden rounded-3xl bg-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 hover:scale-105 cursor-pointer"
+              onClick={() => (window.location.href = `/dish/${dish.id}`)}
             >
               {/* Image with Popular Tag */}
               <div className="relative overflow-hidden">
