@@ -16,7 +16,7 @@ import MyOrderIcon from "../icons/MyOrderIcon.jsx";
 import HistoricIcon from "../icons/HistoricIcon.jsx";
 import ProfileIcon from "../icons/ProfileIcon.jsx";
 
-export default function Dashboard() {
+export default function DashboardClient() {
   const [activeTab, setActiveTab] = useState("home");
 
   const renderContent = () => {
