@@ -24,6 +24,7 @@ import Login from "./pages/login.jsx";
 // import DashboardClient from "./pages/dashboardClient.jsx";
 import DishDetails from "./pages/DishDetails.jsx";
 import DashboardClient from "./pages/dashboardClient.jsx";
+import ProductDetail from "./pages/ProductDetail.jsx";
 // import DishDetails from "./pages/DishDetails.jsx";
 // chart.jschart.js
 
@@ -47,6 +48,7 @@ export default function App() {
             {/* <Route path="/dish/:id" element={<DishDetails />} /> */}
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<DashboardClient />} />
+            <Route path="/product-detail" element={<ProductDetail />} />
 
             
             {/* Admin Routes */}

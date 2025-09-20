@@ -5,7 +5,11 @@ import Promotions from "../components/Promotions.jsx";
 import MyOrder from "./MyOrder.jsx";
 import Historic from "./Historic.jsx";
 import Profile from "./Profile.jsx";
-import MenuManagement from "./MenuManagement.jsx";
+import ProfileClient from "./ProfileClient.jsx";
+import NotificationsClient from "./NotificationsClient.jsx";
+import DashboardMenu from "../components/DashboardMenu.jsx";
+import ProductDetailView from "../components/ProductDetailView.jsx";
+import DzDeliceBot from "./DzDeliceBot.jsx";
 import SearchIcon from "../icons/SearchIcon.jsx";
 import GlobeIcon from "../icons/GlobeIcon.jsx";
 import ShoppingBagIcon from "../icons/ShoppingBagIcon.jsx";
@@ -14,10 +18,29 @@ import HomeIcon from "../icons/HomeIcon.jsx";
 import MenuManagementIcon from "../icons/MenuManagementIcon.jsx";
 import MyOrderIcon from "../icons/MyOrderIcon.jsx";
 import HistoricIcon from "../icons/HistoricIcon.jsx";
+import NotificationIcon from "../icons/NotificationIcon.jsx";
 import ProfileIcon from "../icons/ProfileIcon.jsx";
+import AiIcon from "../icons/AiIcon.jsx";
 
 export default function DashboardClient() {
   const [activeTab, setActiveTab] = useState("home");
+  const [showLogoutModal, setShowLogoutModal] = useState(false);
+
+  const handleLogout = () => {
+    // Add logout logic here (clear tokens, localStorage, etc.)
+    console.log("Logging out...");
+    
+    // Clear any stored authentication data
+    localStorage.removeItem('authToken');
+    localStorage.removeItem('userData');
+    sessionStorage.clear();
+    
+    // Close the modal
+    setShowLogoutModal(false);
+    
+    // Redirect to home page
+    window.location.href = "/";
+  };
 
   const renderContent = () => {
     switch (activeTab) {
@@ -30,13 +53,19 @@ export default function DashboardClient() {
           </>
         );
       case "menu-management":
-        return <MenuManagement />;
+        return <DashboardMenu onNavigateToProduct={() => setActiveTab("product-detail")} />;
+      case "product-detail":
+        return <ProductDetailView onNavigateToMenu={() => setActiveTab("menu-management")} />;
       case "my-order":
         return <MyOrder />;
       case "historic":
         return <Historic />;
+      case "notifications":
+        return <NotificationsClient />;
       case "profile":
-        return <Profile />;
+        return <ProfileClient />;
+      case "ai-bot":
+        return <DzDeliceBot />;
       default:
         return (
           <>
@@ -111,7 +140,7 @@ export default function DashboardClient() {
                   fontVariantNumeric: "lining-nums proportional-nums",
                 }}
               >
-                Menu Management
+                Menu
               </span>
             </button>
             <button
@@ -167,6 +196,58 @@ export default function DashboardClient() {
               </span>
             </button>
             <button
+              onClick={() => setActiveTab("notifications")}
+              className={`flex items-center gap-3 px-3 py-3 rounded-lg w-full text-left ${
+                activeTab === "notifications"
+                  ? "bg-[#FFF1E6] text-[#F67F20]"
+                  : "hover:bg-gray-50 text-gray-700"
+              }`}
+            >
+              <NotificationIcon
+                size={18}
+                fill={activeTab === "notifications" ? "#F67F20" : "#BBBBBB"}
+              />
+              <span
+                style={{
+                  fontFamily: "Poppins",
+                  fontWeight: 500,
+                  fontSize: "16px",
+                  lineHeight: "130%",
+                  letterSpacing: "2%",
+                  verticalAlign: "middle",
+                  fontVariantNumeric: "lining-nums proportional-nums",
+                }}
+              >
+                Notifications
+              </span>
+            </button>
+            <button
+              onClick={() => setActiveTab("ai-bot")}
+              className={`flex items-center gap-3 px-3 py-3 rounded-lg w-full text-left ${
+                activeTab === "ai-bot"
+                  ? "bg-[#FFF1E6] text-[#F67F20]"
+                  : "hover:bg-gray-50 text-gray-700"
+              }`}
+            >
+              <AiIcon
+                size={18}
+                fill={activeTab === "ai-bot" ? "#F67F20" : "#BBBBBB"}
+              />
+              <span
+                style={{
+                  fontFamily: "Poppins",
+                  fontWeight: 500,
+                  fontSize: "16px",
+                  lineHeight: "130%",
+                  letterSpacing: "2%",
+                  verticalAlign: "middle",
+                  fontVariantNumeric: "lining-nums proportional-nums",
+                }}
+              >
+                DzDéliceBot
+              </span>
+            </button>
+            <button
               onClick={() => setActiveTab("profile")}
               className={`flex items-center gap-3 px-3 py-3 rounded-lg w-full text-left ${
                 activeTab === "profile"
@@ -192,9 +273,9 @@ export default function DashboardClient() {
                 Profile
               </span>
             </button>
-            <a
-              className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-50"
-              href="#"
+            <button
+              onClick={() => setShowLogoutModal(true)}
+              className="flex items-center gap-3 px-3 py-3 rounded-lg hover:bg-gray-50 w-full text-left"
             >
               <span
                 style={{
@@ -210,7 +291,7 @@ export default function DashboardClient() {
               >
                 Log out
               </span>
-            </a>
+            </button>
           </nav>
         </aside>
 
@@ -228,7 +309,14 @@ export default function DashboardClient() {
                 letterSpacing: "0%",
               }}
             >
-              Menu Management
+              {activeTab === "home" && "Home"}
+              {activeTab === "menu-management" && "Menu"}
+              {activeTab === "product-detail" && "Menu"}
+              {activeTab === "my-order" && "My Orders"}
+              {activeTab === "historic" && "Order History"}
+              {activeTab === "notifications" && "Notifications"}
+              {activeTab === "profile" && "Profile"}
+              {activeTab === "ai-bot" && "DzDéliceBot"}
             </h1>
 
             {/* Center Search Bar */}
@@ -277,6 +365,55 @@ export default function DashboardClient() {
           <section>{renderContent()}</section>
         </main>
       </div>
+
+      {/* Logout Modal */}
+      {showLogoutModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          {/* Blurred Background Overlay */}
+          <div 
+            className="absolute inset-0 backdrop-blur-md"
+            onClick={() => setShowLogoutModal(false)}
+          ></div>
+          
+          {/* Modal Content */}
+          <div className="relative bg-white rounded-2xl shadow-xl p-8 max-w-md w-full mx-4 transform transition-all">
+            <div className="text-center">
+              {/* Icon */}
+              <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-red-100 mb-4">
+                <svg className="h-8 w-8 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1" />
+                </svg>
+              </div>
+              
+              {/* Title */}
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                Confirm Logout
+              </h3>
+              
+              {/* Message */}
+              <p className="text-gray-600 mb-6">
+                Are you sure you want to log out? You'll need to sign in again to access your account.
+              </p>
+              
+              {/* Buttons */}
+              <div className="flex flex-col sm:flex-row gap-3">
+                <button
+                  onClick={() => setShowLogoutModal(false)}
+                  className="flex-1 px-6 py-3 text-gray-700 bg-gray-100 rounded-lg hover:bg-gray-200 transition-colors font-medium"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleLogout}
+                  className="flex-1 px-6 py-3 text-white bg-red-600 rounded-lg hover:bg-red-700 transition-colors font-medium"
+                >
+                  Log Out
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
