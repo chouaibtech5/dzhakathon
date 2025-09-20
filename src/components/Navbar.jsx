@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import LogoDzDelice from "../icons/LogoDzDelice.jsx";
 import WebIcon from "../icons/WebIcon.jsx";
 import ShopBagIcon from "../icons/ShopBagIcon.jsx";
@@ -6,13 +6,11 @@ import FacebookIcon from "../icons/FacebookIcon.jsx";
 import InstagramIcon from "../icons/InstagramIcon.jsx";
 import ArrowIcon from "../icons/ArrowIcon.jsx";
 import { useCart } from "../context/CartContext.jsx";
-import OrderModal from "./OrderModal.jsx";
-import { useState } from "react";
 
 export default function Navbar() {
   const { getCartCount } = useCart();
   const cartCount = getCartCount();
-  const [isOrderOpen, setIsOrderOpen] = useState(false);
+  const navigate = useNavigate();
 
   return (
     <header className="relative w-full">
@@ -80,6 +78,22 @@ export default function Navbar() {
                   About us
                 </NavLink>
               </li>
+              <li>
+                <NavLink
+                  to="/payment-details"
+                  style={({ isActive }) => ({
+                    fontFamily: "Poppins",
+                    fontWeight: isActive ? 800 : 400,
+                    fontSize: "20px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    textAlign: "center",
+                    color: isActive ? "#F67F20" : "#00000096",
+                  })}
+                >
+                  Track Payment
+                </NavLink>
+              </li>
             </ul>
           </nav>
 
@@ -89,7 +103,7 @@ export default function Navbar() {
               <WebIcon size={20} />
             </span>
             <button
-              onClick={() => setIsOrderOpen(true)}
+              onClick={() => navigate('/cart')}
               className="relative grid h-8 w-8 place-items-center rounded-full bg-[#FFF1E6] hover:bg-[#F67F20]/10 transition-colors"
             >
               <ShopBagIcon size={19} />
@@ -139,9 +153,6 @@ export default function Navbar() {
           </button>
         </div>
       </div>
-
-      {/* Order Modal */}
-      <OrderModal isOpen={isOrderOpen} onClose={() => setIsOrderOpen(false)} />
     </header>
   );
 }

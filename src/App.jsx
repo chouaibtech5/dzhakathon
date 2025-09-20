@@ -21,10 +21,15 @@ import Notifications from "./admin/pages/Notifications.jsx";
 import Dishes from "./pages/dishes.jsx";
 import About from "./pages/about.jsx";  
 import Login from "./pages/login.jsx";
+import Cart from "./pages/Cart.jsx";
 // import DashboardClient from "./pages/dashboardClient.jsx";
 import DishDetails from "./pages/DishDetails.jsx";
 import DashboardClient from "./pages/dashboardClient.jsx";
 import ProductDetail from "./pages/ProductDetail.jsx";
+import PaymentDetails from "./pages/PaymentDetails.jsx";
+import PaymentPage from "./pages/PaymentPage.jsx";
+import PaymentSuccess from "./pages/PaymentSuccess.jsx";
+import PaymentFailure from "./pages/PaymentFailure.jsx";
 // import DishDetails from "./pages/DishDetails.jsx";
 // chart.jschart.js
 
@@ -39,6 +44,12 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/dishes" element={<Dishes />} />
             <Route path="/about" element={<About />} />
+            <Route path="/cart" element={<Cart />} />
+            <Route path="/payment" element={<PaymentPage />} />
+            <Route path="/payment-success" element={<PaymentSuccess />} />
+            <Route path="/payment-failure" element={<PaymentFailure />} />
+            <Route path="/payment-details" element={<PaymentDetails />} />
+            <Route path="/payment-details/:orderNumber" element={<PaymentDetails />} />
             <Route path="/dish/:id" element={<DishDetails />} />
             <Route path="/sms-verification" element={<SMSVerification />} />
             <Route path="/reset-password" element={<ResetPassword />} />
