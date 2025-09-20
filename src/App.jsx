@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { CartProvider } from "./context/CartContext.jsx";
 import Home from "./pages/home.jsx";
 import Dishes from "./pages/dishes.jsx";
+import About from "./pages/about.jsx";
 import Login from "./pages/login.jsx";
 import Dashboard from "./pages/dashboard.jsx";
 import DishDetails from "./pages/DishDetails.jsx";
@@ -14,6 +15,7 @@ export default function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/dishes" element={<Dishes />} />
+            <Route path="/about" element={<About />} />
             <Route path="/dish/:id" element={<DishDetails />} />
             <Route path="/login" element={<Login />} />
             <Route path="/dashboard" element={<Dashboard />} />

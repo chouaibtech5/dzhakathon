@@ -66,20 +66,20 @@ export default function Navbar() {
                 </NavLink>
               </li>
               <li>
-                <a
-                  href="#about"
-                  style={{
+                <NavLink
+                  to="/about"
+                  style={({ isActive }) => ({
                     fontFamily: "Poppins",
-                    fontWeight: 400,
+                    fontWeight: isActive ? 800 : 400,
                     fontSize: "20px",
                     lineHeight: "100%",
                     letterSpacing: "0%",
                     textAlign: "center",
-                    color: "#00000096",
-                  }}
+                    color: isActive ? "#F67F20" : "#00000096",
+                  })}
                 >
                   About us
-                </a>
+                </NavLink>
               </li>
             </ul>
           </nav>

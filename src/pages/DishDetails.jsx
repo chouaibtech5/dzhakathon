@@ -28,8 +28,7 @@ const dishes = [
         comment:
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
-        avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+        avatar: "https://i.pravatar.cc/100?img=1",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -44,13 +43,12 @@ const dishes = [
       },
       {
         id: 2,
-        name: "Floyd Miles",
-        rating: 3,
+        name: "Sarah Johnson",
+        rating: 5,
         comment:
-          "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
+          "Absolutely amazing burger! The meat was perfectly cooked and the sauce was incredible. Will definitely order again!",
         date: "2024-01-12",
-        avatar:
-          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+        avatar: "https://i.pravatar.cc/100?img=2",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -59,6 +57,97 @@ const dishes = [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=100&h=100&fit=crop",
+        ],
+      },
+      {
+        id: 3,
+        name: "Mike Chen",
+        rating: 4,
+        comment:
+          "Great burger overall! The ingredients were fresh and the portion size was perfect. Only minor issue was the wait time.",
+        date: "2024-01-10",
+        avatar: "https://i.pravatar.cc/100?img=3",
+      },
+      {
+        id: 4,
+        name: "Emma Davis",
+        rating: 5,
+        comment:
+          "This burger exceeded my expectations! The combination of flavors was perfect and the presentation was beautiful.",
+        date: "2024-01-08",
+        avatar: "https://i.pravatar.cc/100?img=4",
+        images: [
+          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
+          "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
+        ],
+      },
+      {
+        id: 5,
+        name: "Alex Rodriguez",
+        rating: 3,
+        comment:
+          "Decent burger but nothing special. The price is a bit high for what you get. Might try again but not in a rush.",
+        date: "2024-01-05",
+        avatar: "https://i.pravatar.cc/100?img=5",
+      },
+      {
+        id: 6,
+        name: "Lisa Wang",
+        rating: 4,
+        comment:
+          "Really enjoyed this burger! The meat was juicy and well-seasoned. The bun was fresh and the vegetables were crisp.",
+        date: "2024-01-03",
+        avatar: "https://i.pravatar.cc/100?img=6",
+        images: [
+          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
+          "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
+          "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=100&h=100&fit=crop",
+        ],
+      },
+      {
+        id: 7,
+        name: "David Kim",
+        rating: 5,
+        comment:
+          "Best burger I've had in a long time! The quality of ingredients really shows. Highly recommend to anyone!",
+        date: "2024-01-01",
+        avatar: "https://i.pravatar.cc/100?img=7",
+      },
+      {
+        id: 8,
+        name: "Maria Garcia",
+        rating: 4,
+        comment:
+          "Very good burger with excellent presentation. The service was quick and friendly. Will definitely come back!",
+        date: "2023-12-28",
+        avatar: "https://i.pravatar.cc/100?img=8",
+        images: [
+          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
+          "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
+          "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=100&h=100&fit=crop",
+          "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=100&h=100&fit=crop",
+        ],
+      },
+      {
+        id: 9,
+        name: "James Wilson",
+        rating: 3,
+        comment:
+          "Good burger but the fries were cold when they arrived. The burger itself was tasty though.",
+        date: "2023-12-25",
+        avatar: "https://i.pravatar.cc/100?img=9",
+      },
+      {
+        id: 10,
+        name: "Anna Thompson",
+        rating: 5,
+        comment:
+          "Outstanding burger! Every bite was a delight. The chef really knows how to balance flavors perfectly.",
+        date: "2023-12-22",
+        avatar: "https://i.pravatar.cc/100?img=10",
+        images: [
+          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
+          "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
         ],
       },
     ],
@@ -136,7 +225,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -210,7 +299,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -284,7 +373,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -358,13 +447,11 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
-          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=100&h=100&fit=crop",
-          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=100&h=100&fit=crop",
@@ -381,11 +468,9 @@ const dishes = [
         avatar:
           "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
-          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1546793665-c74683f339c1?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=100&h=100&fit=crop",
-          "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=100&h=100&fit=crop",
         ],
@@ -431,7 +516,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -504,7 +589,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -577,7 +662,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -649,7 +734,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -722,7 +807,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -796,7 +881,7 @@ const dishes = [
           "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non d...",
         date: "2024-01-15",
         avatar:
-          "https://images.unsplash.com/photo-1494790108755-2616b612b786?w=100&h=100&fit=crop&crop=face",
+          "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
         images: [
           "https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=100&h=100&fit=crop",
           "https://images.unsplash.com/photo-1544982503-9f984c14501a?w=100&h=100&fit=crop",
@@ -860,9 +945,20 @@ export default function DishDetails() {
   const [notes, setNotes] = useState("");
   const [viewMode, setViewMode] = useState("card"); // "card" or "list"
   const [currentPage, setCurrentPage] = useState(1);
-  const totalPages = 25;
 
   const dish = dishes.find((d) => d.id === parseInt(id));
+  const reviewsPerPage = 4;
+  const totalPages = dish ? Math.ceil(dish.reviews.length / reviewsPerPage) : 1;
+
+  // Get current page reviews
+  const getCurrentPageReviews = () => {
+    if (!dish) return [];
+    const startIndex = (currentPage - 1) * reviewsPerPage;
+    const endIndex = startIndex + reviewsPerPage;
+    return dish.reviews.slice(startIndex, endIndex);
+  };
+
+  const currentPageReviews = getCurrentPageReviews();
 
   const renderStars = (rating) => {
     return [...Array(5)].map((_, i) => (
@@ -883,12 +979,9 @@ export default function DishDetails() {
       return null;
     }
 
-    const visibleImages = images.slice(0, 5);
-    const remainingCount = images.length - 5;
-
     return (
       <div className="flex gap-2 mt-3">
-        {visibleImages.map((image, index) => (
+        {images.map((image, index) => (
           <div key={index} className="relative">
             <img
               src={image}
@@ -897,20 +990,6 @@ export default function DishDetails() {
             />
           </div>
         ))}
-        {remainingCount > 0 && (
-          <div className="relative">
-            <img
-              src={images[5]}
-              alt="More images"
-              className="w-12 h-12 rounded-lg object-cover blur-sm"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 rounded-lg">
-              <span className="text-white text-xs font-semibold">
-                +{remainingCount}
-              </span>
-            </div>
-          </div>
-        )}
       </div>
     );
   };
@@ -1253,27 +1332,28 @@ export default function DishDetails() {
           {/* Reviews Content */}
           {viewMode === "card" ? (
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {dish.reviews.map((review) => (
+              {currentPageReviews.map((review) => (
                 <div
                   key={review.id}
                   className="bg-white rounded-lg p-6 shadow-sm border border-gray-100"
                 >
                   {/* User Info and Rating */}
-                  <div className="flex items-start gap-4 mb-4">
-                    <img
-                      src={review.avatar}
-                      alt={review.name}
-                      className="w-12 h-12 rounded-full object-cover"
-                    />
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-semibold text-gray-900 text-base">
-                          {review.name}
-                        </h3>
-                        <div className="flex items-center gap-1">
-                          {renderStars(review.rating)}
-                        </div>
-                      </div>
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={review.avatar}
+                        alt={review.name}
+                        className="w-12 h-12 rounded-full object-cover"
+                        onError={(e) => {
+                          e.target.src = "https://i.pravatar.cc/100?img=1";
+                        }}
+                      />
+                      <h3 className="font-semibold text-gray-900 text-base">
+                        {review.name}
+                      </h3>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      {renderStars(review.rating)}
                     </div>
                   </div>
 
@@ -1289,31 +1369,34 @@ export default function DishDetails() {
             </div>
           ) : (
             <div className="space-y-4">
-              {dish.reviews.map((review) => (
+              {currentPageReviews.map((review) => (
                 <div
                   key={review.id}
                   className="bg-white rounded-lg p-4 shadow-sm border border-gray-100"
                 >
-                  <div className="flex items-start gap-4">
-                    <img
-                      src={review.avatar}
-                      alt={review.name}
-                      className="w-10 h-10 rounded-full object-cover"
-                    />
-                    <div className="flex-1">
-                      <div className="flex items-center justify-between mb-2">
-                        <h3 className="font-semibold text-gray-900 text-sm">
-                          {review.name}
-                        </h3>
-                        <div className="flex items-center gap-1">
-                          {renderStars(review.rating)}
-                        </div>
-                      </div>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {review.comment}
-                      </p>
-                      {review.images && renderImages(review.images)}
+                  <div className="flex items-start justify-between mb-4">
+                    <div className="flex items-center gap-3">
+                      <img
+                        src={review.avatar}
+                        alt={review.name}
+                        className="w-10 h-10 rounded-full object-cover"
+                        onError={(e) => {
+                          e.target.src = "https://i.pravatar.cc/100?img=1";
+                        }}
+                      />
+                      <h3 className="font-semibold text-gray-900 text-sm">
+                        {review.name}
+                      </h3>
                     </div>
+                    <div className="flex items-center gap-1">
+                      {renderStars(review.rating)}
+                    </div>
+                  </div>
+                  <div>
+                    <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                      {review.comment}
+                    </p>
+                    {review.images && renderImages(review.images)}
                   </div>
                 </div>
               ))}
@@ -1321,92 +1404,79 @@ export default function DishDetails() {
           )}
 
           {/* Pagination */}
-          <div className="flex items-center justify-between mt-8">
-            <button
-              onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
-              disabled={currentPage === 1}
-              className="px-4 py-2 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Previous
-            </button>
-
-            <div className="flex items-center gap-2">
-              {[1, 2, 3, 4].map((page) => (
-                <button
-                  key={page}
-                  onClick={() => setCurrentPage(page)}
-                  className={`px-3 py-1 text-sm rounded ${
-                    currentPage === page
-                      ? "bg-[#F67F20] text-white"
-                      : "text-gray-600 hover:text-gray-900"
-                  }`}
-                >
-                  {page}
-                </button>
-              ))}
-              <span className="text-gray-400">...</span>
+          {totalPages > 1 && (
+            <div className="flex items-center justify-between mt-8">
               <button
-                onClick={() => setCurrentPage(totalPages)}
-                className={`px-3 py-1 text-sm rounded ${
-                  currentPage === totalPages
-                    ? "bg-[#F67F20] text-white"
-                    : "text-gray-600 hover:text-gray-900"
-                }`}
+                onClick={() => setCurrentPage(Math.max(1, currentPage - 1))}
+                disabled={currentPage === 1}
+                className="px-4 py-2 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
               >
-                {totalPages}
+                Previous
+              </button>
+
+              <div className="flex items-center gap-2">
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                  (page) => (
+                    <button
+                      key={page}
+                      onClick={() => setCurrentPage(page)}
+                      className={`px-3 py-1 text-sm rounded ${
+                        currentPage === page
+                          ? "bg-[#F67F20] text-white"
+                          : "text-gray-600 hover:text-gray-900"
+                      }`}
+                    >
+                      {page}
+                    </button>
+                  )
+                )}
+              </div>
+
+              <button
+                onClick={() =>
+                  setCurrentPage(Math.min(totalPages, currentPage + 1))
+                }
+                disabled={currentPage === totalPages}
+                className="px-4 py-2 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
+              >
+                Next &gt;
               </button>
             </div>
-
-            <button
-              onClick={() =>
-                setCurrentPage(Math.min(totalPages, currentPage + 1))
-              }
-              disabled={currentPage === totalPages}
-              className="px-4 py-2 text-gray-600 hover:text-gray-900 disabled:opacity-50 disabled:cursor-not-allowed"
-            >
-              Next &gt;
-            </button>
-          </div>
+          )}
         </div>
 
         {/* Related Items */}
-        <div className="bg-white rounded-2xl shadow-sm border-2 border-dashed border-blue-200 p-8">
+        <div className="p-8">
           <h2 className="text-2xl font-bold text-gray-900 mb-6">
             You might also like
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="space-y-3">
             {dish.relatedItems.map((item) => (
-              <div key={item.id} className="text-center">
-                <div className="w-20 h-20 bg-gray-100 rounded-full mb-3 mx-auto flex items-center justify-center overflow-hidden">
+              <div
+                key={item.id}
+                className="bg-white rounded-[100px] p-6 border border-gray-200"
+              >
+                <div className="flex items-center space-x-3">
                   <img
                     src={item.img}
                     alt={item.title}
-                    className="w-full h-full object-cover"
+                    className="w-16 h-16 rounded-lg object-cover"
                   />
+                  <div className="flex-1">
+                    <h4 className="font-semibold text-gray-900 text-sm">
+                      {item.title}
+                    </h4>
+                    <p className="text-xs text-gray-500 mt-1">
+                      {item.description}
+                    </p>
+                    <div className="flex items-center justify-between mt-2">
+                      <span className="font-bold text-sm">{item.price}</span>
+                      <button className="bg-black text-white px-3 py-1 rounded-full text-xs hover:bg-gray-800 transition-colors">
+                        Add Cart
+                      </button>
+                    </div>
+                  </div>
                 </div>
-                <h3 className="font-semibold text-gray-900 text-sm mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-gray-600 mb-2">{item.description}</p>
-                <p className="text-sm font-semibold text-gray-900 mb-2">
-                  {item.price}
-                </p>
-                <button className="bg-black text-white text-xs px-3 py-1 rounded-full hover:bg-gray-800 transition-colors flex items-center gap-1 mx-auto">
-                  more
-                  <svg
-                    className="w-3 h-3"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M9 5l7 7-7 7"
-                    />
-                  </svg>
-                </button>
               </div>
             ))}
           </div>
